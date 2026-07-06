@@ -1,0 +1,173 @@
+{
+  "info": {
+    "_postman_id": "6a5fbfc4-0040-4aac-af0c-73c700c2a0fb",
+    "name": "phoenix",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "44864473",
+    "_collection_link": "https://go.postman.co/collection/44864473-6a5fbfc4-0040-4aac-af0c-73c700c2a0fb?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json, text/plain, */*"
+          },
+          {
+            "key": "Accept-Language",
+            "value": "en-US,en;q=0.9"
+          },
+          {
+            "key": "Authorization",
+            "value": ""
+          },
+          {
+            "key": "Connection",
+            "value": "keep-alive"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Origin",
+            "value": "http://phoenix.techwithjatin.com"
+          },
+          {
+            "key": "Referer",
+            "value": "http://phoenix.techwithjatin.com/"
+          },
+          {
+            "key": "User-Agent",
+            "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\": \"{{user}}\",\r\n    \"password\": \"{{pass}}\"\r\n    }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/v1/login",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "v1",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "user details",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json, text/plain, */*"
+          },
+          {
+            "key": "Accept-Language",
+            "value": "en-US,en;q=0.9"
+          },
+          {
+            "key": "Authorization",
+            "value": "{{token}}"
+          },
+          {
+            "key": "Connection",
+            "value": "keep-alive"
+          },
+          {
+            "key": "If-None-Match",
+            "value": "W/\"1b6-cR2dclq1S8zJDBAsHCDA10lTBi4\""
+          },
+          {
+            "key": "Origin",
+            "value": "http://phoenix.techwithjatin.com"
+          },
+          {
+            "key": "Referer",
+            "value": "http://phoenix.techwithjatin.com/"
+          },
+          {
+            "key": "User-Agent",
+            "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+          }
+        ],
+        "url": {
+          "raw": "http://64.227.160.186:9000/v1/userdetails",
+          "protocol": "http",
+          "host": [
+            "64",
+            "227",
+            "160",
+            "186"
+          ],
+          "port": "9000",
+          "path": [
+            "v1",
+            "userdetails"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "user",
+      "value": ""
+    },
+    {
+      "key": "pass",
+      "secret": true
+    },
+    {
+      "key": "token",
+      "secret": true,
+      "source": {
+        "provider": "postman",
+        "postman": {
+          "type": "cloud",
+          "secretId": "f7b35ccb-4c69-454f-91e1-54a17c80765d",
+          "vaultId": "158ca07a-4590-452d-908b-8990da51d8ed"
+        }
+      }
+    }
+  ]
+}
