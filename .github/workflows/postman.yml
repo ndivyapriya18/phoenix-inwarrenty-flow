@@ -55,7 +55,7 @@ jobs:
           server_port: 465
           username: ${{ secrets.EMAIL }}
           password: ${{ secrets.PASSWORD }}
-          to: abishekh01112000@gmail.com
+          to: ndivyapriya188@gmail.com
           from: ${{ secrets.EMAIL }}
           subject: Phoenix-Inwarranty-Flow-Collection-Run-Report
           body: |
