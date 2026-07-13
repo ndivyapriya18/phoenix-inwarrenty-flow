@@ -27,10 +27,10 @@ jobs:
 
       - name: Run Collection
         run: |
-          newman run 'Inwarranty-flow Collection.postman_collection.json' \
-            -e QA.postman_environment.json \
+          newman run 'phoenix.postman_collection.json' \
+            -e qa.postman_environment.json \
             -r cli,htmlextra \
-            -d testdata.csv 
+            -d phoenix.csv 
             -- reporter-htmlextra-export /newman/index.html
 
       - name: Upload Report
